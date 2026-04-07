@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: ambient-sense-backend
+
+ambientsense:
+  mock:
+    # Relativo ao cwd ou absoluto; sobrescrever com AMBENTSENSE_JSONL
+    jsonl-path: ${AMBENTSENSE_JSONL:data/sample-output.jsonl}
+    tick-ms: 1000
+    on-eof: RESTART
+  alerts:
+    temperature-c:
+      min: 18.0
+      max: 30.0
+    humidity-percent:
+      min: 20.0
+      max: 80.0
+    luminosity-percent:
+      min: 0.0
+      max: 100.0
+  history:
+    max-samples: 500
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui
+    operations-sorter: method
+    tags-sorter: alpha

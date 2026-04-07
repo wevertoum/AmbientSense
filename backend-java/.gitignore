@@ -1,0 +1,8 @@
+/target/
+*.iml
+.idea/
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/

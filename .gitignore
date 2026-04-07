@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Editor — raiz do monorepo (cada subprojeto pode ter .gitignore próprio)
+.vscode/*
+!.vscode/extensions.json
+
+# Secrets / ambiente local (nunca commitar)
+.env
+.env.local
+.env.*.local
+
+# Logs soltos na raiz
+*.log
